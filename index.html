@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple JS</title>
+</head>
+
+<body>
+    <h1>Exemple javascript</h1>
+    <button>Appel réseau</button>
+    <div id="resultat">xx</div>
+
+    <script>
+    const request = new XMLHttpRequest();
+    request.open("GET", "https://api.agify.io/?name=boris", true);
+    request.onreadystatechange = function() {
+    // La requête est terminée && s'est bien passée
+     if (this.readyState == 4 && this.status == 200) {
+        // Récupération la réponse texte et on la met dans div id=resultat
+         document.getElementById("resultat").innerText = this.responseText;
+     }
+    };
+    request.send();
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form id="myForm">
+    <label for="inputFirstname">Firstname:</label>
+    <input id="inputFirstname" type="text" name="firstname">
+    <button type="submit">Send</button>
+</form>
+<p>Input : <span></span></p>
+
+<script>
+    let myForm = document.getElementById('myForm');
+    let btnSend = myForm.querySelector('button');
+    let input = myForm.querySelector('input');
+
+    btnSend.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        alert('sent')
+    });
+
+    input.addEventListener('input', function (evt) {
+        document.querySelector('p > span').innerHTML = evt.target.value;
+    })
+
+    // TODO Fonction de rappel en JS (en suivant le modele ci-dessus)
+    function askFirstname(onSuccess, onError) {
+        let value = prompt("Your firstname ?")
+        if (value) {
+            onSuccess(value)
+        } else {
+            onError()
+        }
+    }
+
+    function displayEmptyFirstname() {
+        console.log('empty')
+    }
+
+    function displayFirstname(value) {
+        console.log(value)
+    }
+
+    askFirstname(displayFirstname, displayEmptyFirstname);
+
+
+</script>
+
+
+</body>
+</html>

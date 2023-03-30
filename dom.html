@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript | DOM</title>
+</head>
+<body>
+
+<p>Mon paragraphe blabla</p>
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+
+<input type="text" name="myInput" value="Toto">
+
+<script>
+    let section = document.createElement("section");
+    let article1 = document.createElement("article");
+    let article2 = document.createElement("article");
+    section.appendChild(article1);
+    section.appendChild(article2);
+    document.body.appendChild(section);
+
+    let paragraph = document.querySelector('p');
+    paragraph.classList.add('myClassCss');
+    paragraph.innerHTML = "<i>Coucou</i>";
+    paragraph.innerText = "Coucou";
+
+    console.log(paragraph)
+
+    let div1 = document.getElementById('div1');
+    let div2 = document.getElementById('div2');
+    let div3 = document.getElementById('div3');
+
+    let p = document.querySelector('#div1 > p');
+    console.log(p)
+
+    let divArray = document.querySelectorAll("div");
+    console.log(divArray)
+
+    let input = document.getElementsByName("myInput");
+    console.log(input)
+</script>
+
+
+</body>
+</html>
