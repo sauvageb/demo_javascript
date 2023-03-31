@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+</head>
+<body>
+
+<script>
+    const data = ['Emma', 'Liam', 'Noah', 'Olivia', 'Sophia', 'Jackson', 'Lucas', 'Aiden', 'Mia', 'Charlotte', 'Ethan', 'Amelia', 'Harper', 'Evelyn', 'Michael', 'Benjamin', 'Daniel', 'Abigail', 'Emily', 'Isabella'];
+
+    const result = data.filter(item => item.length > 6);
+    console.log(result)
+
+    const resultBis = data.filter(function (item) {
+        return item.length > 6;
+    });
+    console.log(resultBis)
+
+</script>
+
+</body>
+</html>

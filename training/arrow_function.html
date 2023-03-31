@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+<h1>Arrow Function</h1>
+
+
+<script>
+    // Ecriture ES5 (2009)
+    function addition(a, b) {
+        return a + b;
+    }
+
+    // Ecriture ES6 version 1
+    const additionBis = function (a, b) {
+        this;
+        return a + b;
+    };
+
+    // Ecriture ES6 version 2
+    const additionArrow = (a, b) => {
+        return a + b;
+    }
+
+    // Ecriture ES6 version 2 (sur une seule ligne)
+    const additionArrow = (a, b) => a + b;
+
+
+</script>
+
+
+</body>
+</html>
