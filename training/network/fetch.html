@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+
+<div id="content"></div>
+
+<script>
+    // API Fetch => renvoie une promesse
+    fetch('https://raw.githubusercontent.com/sauvageb/demo_javascript/main/.gitignore')
+        .then(response => {
+            console.log('call finished ' + response.status);
+
+            const data = response.text();
+            data.then(text => {
+                document.getElementById('content').innerText = text;
+            })
+
+        })
+        .catch(error => {
+            console.log('error = ' + error);
+        });
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+
+<div id="content"></div>
+
+
+<script>
+
+    function doSomething(okCallback, errorCallback) {
+        if (Math.random() > 0.5) {
+            okCallback('HEYY !');
+        } else {
+            errorCallback('Error... =/');
+        }
+    }
+
+    function success(result) {
+        console.log('SUCCESS = ' + result);
+    }
+
+    function failure(error) {
+        console.log('FAILURE = ' + error);
+    }
+
+    doSomething(success, failure);
+
+
+    const examplePromise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Math.random() > 0.5) {
+                resolve('Hey ! Je suis le résultat de la promesse');
+            } else {
+                reject('error');
+            }
+        }, 1000);
+    });
+
+    examplePromise
+        .then(myResult => {
+            document.getElementById('content').innerText = myResult;
+        }).catch(myError => {
+        document.getElementById('content').innerText = 'error occured = ' + myError;
+    })
+
+</script>
+
+
+</body>
+</html>

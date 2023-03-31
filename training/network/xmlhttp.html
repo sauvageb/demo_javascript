@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest</title>
+</head>
+<body>
+
+<div id="content"></div>
+
+
+<script>
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://raw.githubusercontent.com/sauvageb/demo_javascript/main/.gitignore');
+    xhr.addEventListener('loadstart', () => {
+        console.log('Starting call');
+    })
+    xhr.addEventListener('loadend', () => {
+        console.log('call finished ' + xhr.status)
+        document.getElementById('content').innerText = xhr.responseText;
+    })
+    xhr.send();
+    console.log('TEST ICI');
+</script>
+
+
+</body>
+</html>
