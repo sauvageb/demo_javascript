@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "picture": "https://randomuser.me/api/portraits/men/25.jpg"
+    },
+    {
+      "id": 2,
+      "firstname": "Ljiljana",
+      "lastname": "Ćirić",
+      "picture": "https://randomuser.me/api/portraits/women/82.jpg"
+    },
+    {
+      "id": 3,
+      "firstname": "Luis",
+      "lastname": "Castillo",
+      "picture": "https://randomuser.me/api/portraits/men/58.jpg"
+    }
+  ]
+}
