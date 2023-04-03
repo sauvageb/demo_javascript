@@ -6,9 +6,6 @@
 class UserService {
 
     getUsers = () => {
-        return this.users;
-
-
         return fetch('./data/data.json')
             .then(response => response.json());
     }
