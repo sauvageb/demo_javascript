@@ -5,7 +5,7 @@ const userService = new UserService();
 
 userService
     .getUsers()
-    .then(data => displayUserList(data.users));
+    .then(data => displayUserList(data));
 
 const displayUserList = (users) => {
     users.forEach(user => displayOneUser(user));
